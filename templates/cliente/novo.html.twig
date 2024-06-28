@@ -1,0 +1,15 @@
+{# templates/cliente/novo.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Adicionar Cliente - Ruplast{% endblock %}
+
+{% block body %}
+    <h1>Adicionar Cliente</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.nome) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.telefone) }}
+        <button class="btn">Adicionar</button>
+    {{ form_end(form) }}
+    <a href="{{ path('cliente_index') }}">Voltar</a>
+{% endblock %}

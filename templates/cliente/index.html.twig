@@ -1,0 +1,25 @@
+{# templates/cliente/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Clientes - Ruplast{% endblock %}
+
+{% block body %}
+    <h1>Clientes - Ruplast</h1>
+    <a href="{{ path('cliente_novo') }}">Adicionar Cliente</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+        </tr>
+        {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.email }}</td>
+                <td>{{ cliente.telefone }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
